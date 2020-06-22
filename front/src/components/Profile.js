@@ -11,7 +11,6 @@ const Profile = () => {
   const [score, setScore] = useState([{}]);
 
   const showMore = () => {
-    // setDatas(datas);
     setShow(!show);
     document.body.style.overflow = "hidden";
   };
@@ -20,19 +19,15 @@ const Profile = () => {
     document.body.style.overflow = "unset";
   };
 
-  // const [loading, setLoading] = useState(false);
   const [profile, setProfile] = useState(null);
   const [modal, setModal] = useState(false);
   const [image, setImage] = useState({
-    // preview: "",
     raw: "",
   });
   const handleImageChange = (e) => {
     if (e.target.files.length) {
       setImage({
         preview: URL.createObjectURL(e.target.files[0]),
-        // ...image,
-        // [e.target.name]: e.target.value,
         raw: e.target.files[0],
       });
     }
@@ -42,8 +37,6 @@ const Profile = () => {
     setModal(!modal);
   };
   const cancel = (e) => {
-    // window.location.reload(false);
-    // setImage({ preview: URL.createObjectURL(e.target.files[0]) });
     popUp();
     setProfile(null);
   };
@@ -58,11 +51,10 @@ const Profile = () => {
     //  refetch
   ] = useAxios({
     method: "get",
-    url: "https://backend.rielcoin.com/userData",
+    url: "http://localhost:8000/userData",
     headers: {
       "Content-Type": "application/json",
       token: accessTokenObj,
-      // token: accessTokenObjs,
     },
   });
 
@@ -80,7 +72,7 @@ const Profile = () => {
     // console.log("hello");
 
     /*update name*/
-    fetch("https://backend.rielcoin.com/updateName", {
+    fetch("http://localhost:8000/updateName", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +88,7 @@ const Profile = () => {
       });
 
     // phone_Number
-    fetch("https://backend.rielcoin.com/updatePhone", {
+    fetch("http://localhost:8000/updatePhone", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -108,7 +100,6 @@ const Profile = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(res.string)
         let a = data;
       });
 
@@ -118,7 +109,7 @@ const Profile = () => {
     console.log([image, setImage][0].raw);
     formData.set("image", [image, setImage][0].raw);
 
-    fetch("https://backend.rielcoin.com/uploadProfile", {
+    fetch("http://localhost:8000/uploadProfile", {
       method: "POST",
       headers: {
         token: accessTokenObj,
@@ -131,7 +122,6 @@ const Profile = () => {
   return (
     <React.Fragment>
       <Navbar />
-      {/* Modal all score */}
       <div
         style={{ backgroundColor: "rgba(0,0,0,0.4", overflow: "visible" }}
         className={
@@ -151,21 +141,9 @@ const Profile = () => {
             </svg>
           </div>
           <div>
-            {/* <span className=" px-2 py-1 inline-block leading-none bg-teal-200 text-teal-800 rounded-full font-semibold uppercase tracking-wide text-xs">
-              Score :
-              <b>
-                {history === ""
-                  ? console.log("true")
-                  : history.score.map((res) => <p>{res}</p>)}
-              </b>
-            </span> */}
-            {/* <h1>Score : </h1> */}
             {history === ""
               ? console.log("true")
               : history.score.map((res) => (
-                  // <p className=" px-2 py-1 inline-block leading-none bg-teal-200 text-teal-800 rounded-full font-semibold uppercase tracking-wide text-xs">
-                  //   {res}
-                  // </p>
                   <div className="grid grid-cols-1">
                     <p className="mb-2 px-2 py-1 inline-block leading-none bg-teal-200 text-teal-800 rounded-full font-semibold uppercase tracking-wide text-xs">
                       Score: {res}
@@ -175,10 +153,6 @@ const Profile = () => {
           </div>
         </div>
       </div>
-
-      {/* <span className=" px-2 py-1 inline-block leading-none bg-teal-200 text-teal-800 rounded-full font-semibold uppercase tracking-wide text-xs">
-          Score :{history.score}
-        </span> */}
 
       <div
         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
@@ -199,7 +173,6 @@ const Profile = () => {
                     style={{ marginTop: "-6px" }}
                     className=" md:-mt-20  sm:mx-auto h-24 w-24 -mt-16 md:h-32 md:w-32 rounded-full   "
                     src={image.preview}
-                    // src={profile ? profile.user_profile : ""}
                     alt="dummy"
                     width="300"
                     height="300"
@@ -227,10 +200,7 @@ const Profile = () => {
             <label className="mb-6 text-black">Name</label>
             <input
               className="rounded bg-gray-400 focus:outline-none py-1 px-1 block mb-2 w-full sm:w-full"
-              // type="text"
-              // name="name"change profile picture in react js
               value={profile ? profile.user_name : ""}
-              // ref={register({ required: true, minLength: 5 })}
               name="name"
               type="text"
               onChange={(e) =>
@@ -243,10 +213,7 @@ const Profile = () => {
             <label className="mb-6 text-black">Phone</label>
             <input
               className="rounded bg-gray-400 focus:outline-none py-1 px-1 block mb-2 w-full sm:w-full"
-              // type="text"
-              // name="name"change profile picture in react js
               value={profile ? profile.phone_number : ""}
-              // ref={register({ required: true, minLength: 5 })}
               name="phone"
               type="number"
               onChange={(e) =>
@@ -259,7 +226,6 @@ const Profile = () => {
 
             <input
               onClick={refreshPage}
-              // onClick={popUp}
               type="submit"
               value="Submit"
               className="mr-2 mt-5 cursor-pointer bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -287,7 +253,6 @@ const Profile = () => {
               src={profile ? profile.user_profile : ""}
             />
             <div
-              // onClick={popUp}
               className="mt-2 flex  text-xl font-bold text-blue-600 text-gray-600"
             >
               <span className="ml-2 sm:mx-auto ">

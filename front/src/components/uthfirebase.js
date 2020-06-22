@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
 import firebase, { auth } from "firebase";
 import axios from "axios";
-// import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { FirebaseAuth } from "react-firebaseui";
-
-// firebase.initializeApp({
-//   // apiKey: "AIzaSyCs-PhYAG1ZEYuF9Hbhinn7Iwh9ZhwrNJ4",
-//   apiKey: "AIzaSyCAKhyd1Bi_lqnR7uUyRFvJuZSJ_qlbmpo",
-//   authDomain: "fir-auth-804c3.firebaseapp.com",
-// });
 const Authfirebase = () => {
   const [state, setState] = useState({
     isSingedIn: false,
@@ -19,9 +12,6 @@ const Authfirebase = () => {
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-      // firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      // firebase.auth.EmailAuthProvider.PROVIDER_ID,
     ],
     callbacks: {
       signInSuccess: () => false,

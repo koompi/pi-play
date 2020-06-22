@@ -6,7 +6,6 @@ import three_dots from "../assets/bars.svg";
 import FacebookLogin from "react-facebook-login";
 import GoogleLogin from "react-google-login";
 import Message from "../components/Message/Message";
-// import successMessage from "../components/Message/SuccessMessage";
 import SuccessMessage from "../components/Message/SuccessMessage";
 
 const Login = () => {
@@ -18,7 +17,7 @@ const Login = () => {
     redirectToReferrer: false,
   });
   const onSubmit = (data) => {
-    fetch("https://backend.rielcoin.com/all_login", {
+    fetch("http://localhost:8000/all_login", {
       method: "POST",
 
       body: JSON.stringify({
@@ -68,7 +67,7 @@ const Login = () => {
     let user_profile = user.imageUrl;
     let login_type = "google";
 
-    fetch("https://backend.rielcoin.com/all_login", {
+    fetch("http://localhost:8000/all_login", {
       method: "POST",
       header: {
         "Content-Type": "application/json",
@@ -101,7 +100,7 @@ const Login = () => {
     let user_profile = user.picture.data.url;
     let login_type = "facebook";
 
-    fetch("https://backend.rielcoin.com/all_login", {
+    fetch("http://localhost:8000/all_login", {
       method: "POST",
       header: {
         "Content-Type": "application/json",
@@ -142,10 +141,8 @@ const Login = () => {
       {message ? <Message msg={message} /> : null}
       {successMessage ? <SuccessMessage msg={successMessage} /> : null}
       <div className="flex  items-center justify-center h-screen ">
-        {/* <ParticlesBg type="ball" bg={true} /> */}
         <div className="w-full max-w-md">
           <form
-            // style={{ backgroundColor: "rgb(250, 255, 255, 0.625)" }}
             className="blur bg-white rounded shadow-md px-8 pt-6 pb-8 mb-4"
             onSubmit={handleSubmit(onSubmit)}
           >
@@ -197,7 +194,6 @@ const Login = () => {
                   className="justify-center mx-auto w-6 h-6"
                   src={three_dots}
                   alt="loading image"
-                  // height="8"
                 />
               ) : (
                 "Sign In"

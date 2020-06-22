@@ -2,9 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navbar from "../layouts/Navbar";
-// import ParticlesBg from "particles-bg";
-// import Sound from "react-sound";
-
 const TITLE = "Koompi play | Quiz";
 
 const Start = () => (
@@ -13,14 +10,7 @@ const Start = () => (
       <title>{TITLE}</title>
     </Helmet>
     <Navbar />
-    {/* <Sound
-      url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"
-      playStatus={Sound.status.PLAYING}
-      playFromPosition={300}
-      volume={50}
-    /> */}
     <div id="home">
-      {/* <ParticlesBg type="random" bg={true} /> */}
       <section style={{ marginTop: "90px" }} id="section">
         <h1 className="app text-gray-100 text-center text-current">Quiz Game</h1>
         <ul>

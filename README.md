@@ -47,7 +47,7 @@
     $ npm start 
     ```
 
-    Open browser and run http://localhost:8000
+    Open browser and run http://localhost:8000 (back-end), http://localhost:3000 (front-end)
 
 ## **Learn More**
 You can learn more about [cargo](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjp8q-Yso_qAhWGcn0KHTX2BvQQFjAAegQIBhAC&url=https%3A%2F%2Fdoc.rust-lang.org%2Fcargo%2Fcommands%2Fcargo-doc.html&usg=AOvVaw3llUPEo2MdZVgOGxjr7ocW).

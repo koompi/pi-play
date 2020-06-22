@@ -23,7 +23,7 @@ const FileUpload = () => {
     console.log([file, setFile][0]);
     formData.set("image", [file, setFile][0]);
 
-    fetch("http://52.221.199.235:9000/uploadProfile", {
+    fetch("http://localhost:8000/uploadProfile", {
       method: "POST",
       headers: {
         token: accessTokenObj,

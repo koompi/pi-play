@@ -11,14 +11,12 @@ function UserInfo() {
   const { register } = useForm();
 
   const onChange = (e) => {
-    // setProfile({ ...profile, [e.target.name]: e.target.value });
     const target = e.target;
     const value = target.value;
     const name = target.value;
     setProfile({
       [name]: value,
     });
-    // console.log(profile);
   };
   const [modal, setModal] = useState(false);
   const popUp = () => {
@@ -48,7 +46,6 @@ function UserInfo() {
 
   const [
     { data, loading, error },
-    //  refetch
   ] = useAxios({
     method: "get",
     url: "http://52.221.199.235:9000/userData",
@@ -61,7 +58,6 @@ function UserInfo() {
   if (loading) return <p>Loading...</p>;
   if (error) return window.location.replace("http://52.221.199.235:9000/login");
   if (data) {
-    // console.log(data);
     if (profile === null) {
       setProfile({ ...data });
     }
@@ -78,7 +74,6 @@ function UserInfo() {
               <div className="px-6 sm:px-3 ">
                 <img
                   className="overflow-hidden -mt-12 sm:-mt-16  h-20 w-20 md:h-32 md:w-32 rounded-full  md:mx-0 "
-                  // src="/img/01-shutterstock_476340928-Irina-Bg.jpg"
                   src={profile ? profile.user_profile : ""}
                   alt="profile"
                 />
@@ -92,11 +87,8 @@ function UserInfo() {
                     onClick={popUp}
                     className="bg-no-repeat border-blue-500 border-2 px-3 py-2 bg-blue-400 rounded-full hover:bg-blue-200 text-white cursor-pointer"
                   />
-
-                  {/* </input> */}
                 </div>
               </div>
-              {/* Popup */}
               <div>
                 <div
                   className={
@@ -112,8 +104,6 @@ function UserInfo() {
                   <label className="text-white">Name</label>
                   <input
                     className="rounded py-1 px-1 block mb-2 w-full sm:w-full"
-                    // type="text"
-                    // name="name"change profile picture in react js
                     value={profile ? profile.user_name : ""}
                     ref={register({ required: true, minLength: 5 })}
                     name="name"
@@ -123,8 +113,6 @@ function UserInfo() {
                   <label className="text-white">Email</label>
                   <input
                     className="rounded py-1 px-1 block mb-2 w-full sm:w-full"
-                    // type="text"
-                    // name="name"change profile picture in react js
                     value={profile ? profile.user_email : ""}
                     ref={register({ required: true, minLength: 5 })}
                     name="name"
@@ -134,8 +122,6 @@ function UserInfo() {
                   <label className="text-white">Phone</label>
                   <input
                     className="rounded py-1 px-1 block mb-2 w-full sm:w-full"
-                    // type="text"
-                    // name="name"change profile picture in react js
                     value={profile ? profile.phone_number : ""}
                     ref={register({ required: true, minLength: 5 })}
                     name="name"
@@ -143,8 +129,6 @@ function UserInfo() {
                     onChange={onChange}
                   />
                   <input
-                    // onClick={onClose}
-                    // className={errors.name ? "block" : "hidden"}
                     type="button"
                     value="Submit"
                     className="mr-2 mt-5 cursor-pointer bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -162,7 +146,6 @@ function UserInfo() {
                 <div className=" px-3 mb-3 ">
                   <span className="text-xs ">Email</span>
                   <h1
-                    // onClick={popUp}
                     className="-mb-2 font-xl text-lg   "
                   >
                     {profile ? profile.user_email : ""}
@@ -171,7 +154,6 @@ function UserInfo() {
                 <div className=" px-3 mb-10">
                   <span className="text-xs ">Phone</span>
                   <h1
-                    // onClick={popUp}
                     className="-mb-2 font-xl text-lg   "
                   >
                     {profile ? profile.phone_number : ""}

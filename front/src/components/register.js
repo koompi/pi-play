@@ -11,32 +11,6 @@ const Register = () => {
   const [successMessage, setSucessMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const onSubmit = (data) => {
-    // console.log(data);
-    // fetch("http://52.221.199.235:9000/register", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     // Host: "localhost:8000",
-    //   },
-
-    //   body: JSON.stringify({
-    // user_name: data.Username,
-    // user_gender: data.gender,
-    // user_email: data.Email,
-    // user_password: data.Password,
-    // phone_number: data.Phone,
-    //   }),
-    // })
-    //   .then((res) => res.text())
-    //   .then((data) => {
-    //     if (data) {
-    //       window.location.replace("/login");
-    //     } else {
-    //       alert("err");
-    //     }
-    //     // window.location.replace("/login");
-    //     alert(data);
-    //   });
     const newUser = {
       user_name: data.Username,
       user_gender: data.gender,
@@ -46,7 +20,7 @@ const Register = () => {
       login_type: "local",
     };
     axios
-      .post("https://backend.rielcoin.com/register", newUser)
+      .post("http://localhost:8000/register", newUser)
       .then((data) => {
         setLoading(true);
         setTimeout(() => {
@@ -63,11 +37,9 @@ const Register = () => {
   return (
     <div>
       {successMessage ? <SuccessfulMessage msg={successMessage} /> : null}
-      {/* <ParticlesBg type="ball" bg={true} /> */}
       <div className="flex  items-center justify-center h-screen ">
         <div className="w-full max-w-md">
           <form
-            // style={{ backgroundColor: "rgb(250, 255, 255, 0.625)" }}
             className="blur bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
             onSubmit={handleSubmit(onSubmit)}
           >
@@ -89,7 +61,6 @@ const Register = () => {
               )}
             </div>
             <div
-              // className={errors.lastName ? "field error" : "field"}
               className="mb-4"
             >
               <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -137,7 +108,6 @@ const Register = () => {
               )}
             </div>
             <div
-              // className={errors.lastName ? "field error" : "field"}
               className="mb-4"
             >
               <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -179,7 +149,6 @@ const Register = () => {
                   className="justify-center mx-auto w-6 h-6"
                   src={three_dots}
                   alt="loading image"
-                  // height="8"
                 />
               ) : (
                 "Sign Up"
