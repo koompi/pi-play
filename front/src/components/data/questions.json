@@ -1,0 +1,136 @@
+[
+    {
+        "question": "What temperature does water boil at?",
+        "optionA": "50 degrees Celcius",
+        "optionB": "25 degrees Celcius",
+        "optionC": "100 degrees Celcius",
+        "optionD": "150 degrees Celcius",
+        "answer": "100 degrees Celcius"
+    },
+
+    {
+        "question": "Who wrote Julius Caesar, Macbeth and Hamlet?",
+        "optionA": "Wole Soyinka",
+        "optionB": "William Shakespeare",
+        "optionC": "Ngozi Chimamanda Adichie",
+        "optionD": "Dan Brown",
+        "answer": "William Shakespeare"
+    },
+
+    {
+        "question": "First China War was fought between?",
+        "optionA": "China and Britain",
+        "optionB": "China and France",
+        "optionC": "China and Egypt",
+        "optionD": "China and Greek",
+        "answer": "China and Britain"
+    },
+
+    {
+        "question": "Which is the only mammal that can’t jump?",
+        "optionA": "Dog",
+        "optionB": "Elephant",
+        "optionC": "Goat",
+        "optionD": "Lion",
+        "answer": "Elephant"
+    },
+
+    {
+        "question": "Each year World Red Cross and Red Crescent Day is celebrated on?",
+        "optionA": "May 8",
+        "optionB": "May 18",
+        "optionC": "June 8",
+        "optionD": "June 18",
+        "answer": "May 8"
+    },
+
+    {
+        "question": "What colour is a panda?",
+        "optionA": "Green and Yellow",
+        "optionB": "Blue and Red",
+        "optionC": "Green and White",
+        "optionD": "Black and White",
+        "answer": "Black and White"
+    },
+
+    {
+        "question": "Where is the smallest bone in the human body?",
+        "optionA": "The Chest",
+        "optionB": "The Ear",
+        "optionC": "The Legs",
+        "optionD": "The Hands",
+        "answer": "The Ear"
+    },
+
+    {
+        "question": "What does the roman numeral C represent?",
+        "optionA": "100",
+        "optionB": "10",
+        "optionC": "10,000",
+        "optionD": "1,000,000",
+        "answer": "100"
+    },
+
+    {
+        "question": "India has largest deposits of ____ in the world.",
+        "optionA": "gold",
+        "optionB": "copper",
+        "optionC": "mica",
+        "optionD": "None of the above",
+        "answer": "mica"
+    },
+
+    {
+        "question": "Who painted the Mona Lisa?",
+        "optionA": "Alexander Graham Bell",
+        "optionB": "Sir Isaac Newton",
+        "optionC": "Leonardo Da Vinci",
+        "optionD": "Albert Einstein",
+        "answer": "Leonardo Da Vinci"
+    },
+
+    {
+        "question": "What’s the most important book in the Moslem religion?",
+        "optionA": "The Koran",
+        "optionB": "The Dictionary",
+        "optionC": "The Bible",
+        "optionD": "The Chemistry text Book",
+        "answer": "The Koran"
+    },
+
+    {
+        "question": "What’s the capital of Ethiopia?",
+        "optionA": "Cape Town",
+        "optionB": "San Francisco",
+        "optionC": "Abuja",
+        "optionD": "Syndey",
+        "answer": "Addis Ababa"
+    },
+
+    {
+        "question": "How many squares are there on a chess board?",
+        "optionA": "128",
+        "optionB": "64",
+        "optionC": "32",
+        "optionD": "256",
+        "answer": "64"
+    },
+
+    {
+        "question": "Who invented the electric light bulb?",
+        "optionA": "Tom Cruise",
+        "optionB": "Barack Obama",
+        "optionC": "Wole Soyinka",
+        "optionD": "Thomas Edison",
+        "answer": "Thomas Edison"
+    },
+
+    {
+        "question": "Logarithm tables were invented by",
+        "optionA": "John Napier",
+        "optionB": "John Doe",
+        "optionC": "John Harrison",
+        "optionD": "John Douglas",
+        "answer": "John Napier"
+    }
+]

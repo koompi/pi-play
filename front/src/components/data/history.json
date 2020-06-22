@@ -1,0 +1,22 @@
+[
+  {
+    "img": "/img/quizbackground.png",
+    "title": "history",
+    "score": [1, 12]
+  },
+  {
+    "img": "/img/quizbackground.png",
+    "title": "Math",
+    "score": [12, 10, 12, 12, 12, 10, 12, 12, 12, 10, 12, 12]
+  },
+  {
+    "img": "/img/quizbackground.png",
+    "title": "Geo",
+    "score": [5, 34]
+  },
+  {
+    "img": "/img/quizbackground.png",
+    "title": "C++",
+    "score": [7, 34]
+  }
+]
