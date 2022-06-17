@@ -9,7 +9,7 @@ edition = "2018"
 [dependencies]
 rocket = "0.4.2"
 userInfo = { path = "../userInfo" }
-diesel = { version = "1.0.0", features = ["postgres", "chrono"] }
+diesel = { version = "1.4.6", features = ["postgres", "chrono"] }
 chrono = { version = "0.4.10", features = ["serde"] }
 rocket_cors = "0.5.2"
 game-back-end = { path = "../game-back-end" }
